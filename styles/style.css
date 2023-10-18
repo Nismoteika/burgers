@@ -16,12 +16,12 @@ button {
 
 @font-face {
     font-family: 'Gilroy';
-    src: url('/fonts/Gilroy-Semibold.ttf');
+    src: url('../fonts/Gilroy-Semibold.ttf');
 }
 
 @font-face {
     font-family: 'Merriweather';
-    src: url('/fonts/Merriweather-Black.ttf');
+    src: url('../fonts/Merriweather-Black.ttf');
 }
 
 body {
@@ -41,7 +41,7 @@ html, body, .background-wrapper {
     z-index: -1;
     width: 400px;
     height: 100%;
-    background-image: url('/images/bg-effects_left.png');
+    background-image: url('../images/bg-effects_left.png');
     background-repeat: no-repeat;
     background-position: left 0;
 }
@@ -54,7 +54,7 @@ html, body, .background-wrapper {
     z-index: -1;
     width: 400px;
     height: 100%;
-    background-image: url('/images/bg-effects_right.png');
+    background-image: url('../images/bg-effects_right.png');
     background-repeat: no-repeat;
     background-position: right 0;
 }
@@ -141,6 +141,7 @@ main .container .texts-block {
 }
 
 main .container .texts-block h1 {
+    margin-top: 10px;
     margin-bottom: 56px;
 
     font-family: Merriweather;
