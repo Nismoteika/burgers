@@ -425,13 +425,23 @@ main .container .burger-chedder-image {
     background: #211A16;
 }
 
+#delivery-block-form .input-text-wrapper {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: linear-gradient(95deg, #da8023 0%, #e2b438 100%);
+}
+
 #delivery-block-form .input-text {
+    width: calc(100% - 3px);
+    height: calc(100% - 3px);
+    border-radius: 8px;
+    border: 1px solid transparent;
     color: var(--white);
     outline: none;
     padding: 16px 10px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border: 1px solid #DA8023;
     background: #211A16;
 }
 
