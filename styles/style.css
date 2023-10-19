@@ -46,6 +46,17 @@ button {
     cursor: pointer;
 }
 
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+}
+
+.i-card {
+    background-image: url('../images/icons/shopping-card.svg');
+}
+
 @font-face {
     font-family: 'Gilroy';
     src: url('../fonts/Gilroy-Semibold.ttf');
@@ -205,6 +216,8 @@ main .container .texts-block p {
 }
 
 .yellow-button {
+    display: flex;
+    align-items: center;
     padding: 19px 50px;
     border-radius: 8px;
     background: linear-gradient(96deg, #DA8023 0%, #E2B438 100%);
@@ -349,6 +362,10 @@ main .container .burger-chedder-image {
     justify-content: space-between;
 }
 
+.product-footer button .i-card {
+    margin-left: 10px;
+}
+
 .product-footer-info {
     display: flex;
     flex-flow: column nowrap;
@@ -416,6 +433,11 @@ main .container .burger-chedder-image {
     border-radius: 8px;
     border: 1px solid #DA8023;
     background: #211A16;
+}
+
+#delivery-block-form .input-submit {
+    justify-content: center;
+    cursor: pointer;
 }
 
 #food-delivery-box-wrapper {
