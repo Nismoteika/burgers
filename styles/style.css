@@ -261,6 +261,7 @@ main .container .burger-chedder-image {
 
 #choose-section {
     height: 507px;
+    margin-bottom: 100px;
     background-image: url('../images/bg-effects-choose.png');
     background-repeat: no-repeat;
     background-size: cover;
