@@ -437,7 +437,7 @@ main .container .burger-chedder-image {
 #delivery-block-form .input-text {
     width: calc(100% - 3px);
     height: calc(100% - 3px);
-    border-radius: 8px;
+    border-radius: 7px;
     border: 1px solid transparent;
     color: var(--white);
     outline: none;
