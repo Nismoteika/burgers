@@ -116,6 +116,11 @@ html, body, .background-wrapper {
     margin: 0 auto;
 }
 
+header {
+    position: relative;
+    z-index: 3;
+}
+
 header .container {
     height: 130px;
     align-items: center;
@@ -462,17 +467,18 @@ main .container .burger-chedder-image {
 }
 #food-delivery-box-wrapper::before {
     content: "";
-
     width: 175%;
     height: 175%;
     background-image: url('../images/bg-effects-delivery.png');
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    z-index: -1;
     top: 50%;
     left: -50%;
     transform: translateY(-50%);
+}
+#food-delivery-box {
+    position: relative;
 }
 
 footer .container {
