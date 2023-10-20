@@ -142,6 +142,7 @@ header nav ul li:last-child {
 }
 
 header nav ul li a {
+    cursor: pointer;
     color: var(--white);
     text-decoration: none;
 
