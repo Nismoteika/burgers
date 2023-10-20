@@ -8,10 +8,53 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: Merriweather;
+}
+
+h1 {
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 130%;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 80px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-family: Gilroy;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
 }
 
 button {
     cursor: pointer;
+}
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+}
+
+.i-card {
+    background-image: url('../images/icons/shopping-card.svg');
 }
 
 @font-face {
@@ -31,6 +74,14 @@ body {
 
 html, body, .background-wrapper {
     height: 100%;
+}
+
+.logo {
+    height: 50px;
+}
+
+.background-wrapper {
+    overflow: hidden;
 }
 
 .background-wrapper::before {
@@ -65,14 +116,15 @@ html, body, .background-wrapper {
     margin: 0 auto;
 }
 
+header {
+    position: relative;
+    z-index: 3;
+}
+
 header .container {
     height: 130px;
     align-items: center;
     justify-content: space-between;
-}
-
-header .top-logo {
-    height: 50px;
 }
 
 header nav ul {
@@ -90,6 +142,7 @@ header nav ul li:last-child {
 }
 
 header nav ul li a {
+    cursor: pointer;
     color: var(--white);
     text-decoration: none;
 
@@ -125,7 +178,6 @@ header button#change-currency-button {
 
 main {
     height: calc(100% - 130px);
-    overflow: hidden;
 }
 
 main .container {
@@ -143,14 +195,6 @@ main .container .texts-block {
 main .container .texts-block h1 {
     margin-top: 10px;
     margin-bottom: 56px;
-
-    font-family: Merriweather;
-    font-size: 120px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 130%;
-    letter-spacing: 3.6px;
-    text-transform: uppercase;
 }
 
 main .container .texts-block p {
@@ -178,6 +222,8 @@ main .container .texts-block p {
 }
 
 .yellow-button {
+    display: flex;
+    align-items: center;
     padding: 19px 50px;
     border-radius: 8px;
     background: linear-gradient(96deg, #DA8023 0%, #E2B438 100%);
@@ -197,7 +243,6 @@ main .container .texts-block p {
 
 main .container .image-wrapper {
     width: 50%;
-    
 }
 
 main .container .burger-chedder-image {
@@ -206,4 +251,247 @@ main .container .burger-chedder-image {
     top: 50%;
     left: calc(100% - 991px);
     transform: translateY(-50%);
+}
+
+.titled-section {
+    margin-bottom: 180px;
+}
+
+.titled-section .container {
+    flex-flow: column nowrap;
+}
+
+.titled-section h2 {
+    margin-bottom: 60px;
+}
+
+#choose-section {
+    height: 507px;
+    margin-bottom: 100px;
+    background-image: url('../images/bg-effects-choose.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.info-choose_list {
+    display: flex;
+}
+
+.info-choose {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-right: 105px;
+}
+
+.info-choose:last-child {
+    margin-right: 0;
+}
+
+.info-choose img {
+    width: 100px;
+    height: 100px;
+}
+
+.info-choose h5 {
+    margin: 24px 0;
+}
+
+.info-choose p {
+    font-family: Gilroy;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+#list-burgers {
+    position: relative;
+}
+
+#list-burgers::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-image: url('../images/bg-effects-products.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.products-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.products-item {
+    width: 364px;
+    height: 564px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+    gap: 24px;
+
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid #353535;
+    background: #211A16;
+}
+
+.products-item h5 {
+    text-align: left;
+}
+
+.products-item img {
+    height: 280px;
+    width: 100%;
+}
+
+.products-item p {
+    font-family: Gilroy;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-footer button .i-card {
+    margin-left: 10px;
+}
+
+.product-footer-info {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.product-footer-price {
+    font-family: Gilroy;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.product-footer-weight {
+    color: #757575;
+
+    font-family: Gilroy;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+#make-order {
+    background-image: url('../images/bg-effects-delivery_right.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+#make-order .container .order_wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#make-order h4 {
+    text-align: center;
+    margin-bottom: 40px;
+
+    font-family: Gilroy;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+#delivery-block-form {
+    display: flex;
+    flex-flow: column nowrap;
+    
+    padding: 60px 40px;
+    width: 424px;
+    height: 525px;
+    border-radius: 16px;
+    border: 1px solid #353535;
+    background: #211A16;
+}
+
+#delivery-block-form .input-text-wrapper {
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+    height: 62px;
+    border-radius: 8px;
+    background: linear-gradient(95deg, #da8023 0%, #e2b438 100%);
+}
+
+#delivery-block-form .input-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 3px);
+    height: calc(100% - 3px);
+    border-radius: 7px;
+    border: 1px solid transparent;
+    color: var(--white);
+    outline: none;
+    padding: 16px 10px;
+    background: #211A16;
+}
+
+#delivery-block-form .input-submit {
+    justify-content: center;
+    cursor: pointer;
+}
+
+#food-delivery-box-wrapper {
+    position: relative;
+    width: 590px;
+    height: 464px;
+}
+#food-delivery-box-wrapper::before {
+    content: "";
+    width: 175%;
+    height: 175%;
+    background-image: url('../images/bg-effects-delivery.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    transform: translateY(-50%);
+}
+#food-delivery-box {
+    position: relative;
+}
+
+footer .container {
+    height: 170px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer span {
+    font-family: Gilroy;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
 }
