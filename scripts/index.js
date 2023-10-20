@@ -13,6 +13,11 @@ productButtons.forEach(function(productButton) {
     })
 })
 
+const viewMenuButton = document.getElementById('view-menu');
+viewMenuButton.addEventListener('click', function() {
+    document.getElementById('make-order').scrollIntoView({behavior: 'smooth'})
+})
+
 const orderField = document.querySelector('input[name=order]')
 const nameField = document.querySelector('input[name=name]')
 const phoneField = document.querySelector('input[name=phone]')
