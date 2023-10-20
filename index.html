@@ -15,9 +15,9 @@
                 <img class="top-logo" src="./images/logo.svg" alt="burger logo" />
                 <nav>
                     <ul>
-                        <li><a href="#">Почему у нас</a></li>
-                        <li><a href="#">Меню бургеров</a></li>
-                        <li><a href="#">Оформление заказа</a></li>
+                        <li><a data-link="choose-section">Почему у нас</a></li>
+                        <li><a data-link="list-burgers">Меню бургеров</a></li>
+                        <li><a data-link="make-order">Оформление заказа</a></li>
                     </ul>
                 </nav>
                 <button id="change-currency-button">$</button>
@@ -90,7 +90,7 @@
                     </p>
                     <div class="product-footer">
                         <div class="product-footer-info">
-                            <span class="product-footer-price">8 $</span>
+                            <span class="product-footer-price" data-base-price="8">8 $</span>
                             <span class="product-footer-weight">360 гр</span>
                         </div>
                         <button class="yellow-button">
@@ -109,7 +109,7 @@
                     </p>
                     <div class="product-footer">
                         <div class="product-footer-info">
-                            <span class="product-footer-price">7 $</span>
+                            <span class="product-footer-price" data-base-price="7">7 $</span>
                             <span class="product-footer-weight">390 гр</span>
                         </div>
                         <button class="yellow-button">
@@ -127,7 +127,7 @@
                     </p>
                     <div class="product-footer">
                         <div class="product-footer-info">
-                            <span class="product-footer-price">10 $</span>
+                            <span class="product-footer-price" data-base-price="10">10 $</span>
                             <span class="product-footer-weight">420 гр</span>
                         </div>
                         <button class="yellow-button">
@@ -145,7 +145,7 @@
                     </p>
                     <div class="product-footer">
                         <div class="product-footer-info">
-                            <span class="product-footer-price">7 $</span>
+                            <span class="product-footer-price" data-base-price="7">7 $</span>
                             <span class="product-footer-weight">220 гр</span>
                         </div>
                         <button class="yellow-button">
@@ -163,7 +163,7 @@
                     </p>
                     <div class="product-footer">
                         <div class="product-footer-info">
-                            <span class="product-footer-price">8 $</span>
+                            <span class="product-footer-price" data-base-price="8">8 $</span>
                             <span class="product-footer-weight">220 гр</span>
                         </div>
                         <button class="yellow-button">
@@ -181,7 +181,7 @@
                     </p>
                     <div class="product-footer">
                         <div class="product-footer-info">
-                            <span class="product-footer-price">9 $</span>
+                            <span class="product-footer-price" data-base-price="9">9 $</span>
                             <span class="product-footer-weight">320 гр</span>
                         </div>
                         <button class="yellow-button">
@@ -199,7 +199,7 @@
                     </p>
                     <div class="product-footer">
                         <div class="product-footer-info">
-                            <span class="product-footer-price">8 $</span>
+                            <span class="product-footer-price" data-base-price="8">8 $</span>
                             <span class="product-footer-weight">280 гр</span>
                         </div>
                         <button class="yellow-button">
@@ -217,7 +217,7 @@
                     </p>
                     <div class="product-footer">
                         <div class="product-footer-info">
-                            <span class="product-footer-price">7 $</span>
+                            <span class="product-footer-price" data-base-price="7">7 $</span>
                             <span class="product-footer-weight">380 гр</span>
                         </div>
                         <button class="yellow-button">
@@ -235,7 +235,7 @@
                     </p>
                     <div class="product-footer">
                         <div class="product-footer-info">
-                            <span class="product-footer-price">11 $</span>
+                            <span class="product-footer-price" data-base-price="11">11 $</span>
                             <span class="product-footer-weight">400 гр</span>
                         </div>
                         <button class="yellow-button">
@@ -253,7 +253,7 @@
                     </p>
                     <div class="product-footer">
                         <div class="product-footer-info">
-                            <span class="product-footer-price">9 $</span>
+                            <span class="product-footer-price" data-base-price="9">9 $</span>
                             <span class="product-footer-weight">300 гр</span>
                         </div>
                         <button class="yellow-button">
@@ -271,7 +271,7 @@
                     </p>
                     <div class="product-footer">
                         <div class="product-footer-info">
-                            <span class="product-footer-price">9 $</span>
+                            <span class="product-footer-price" data-base-price="9">9 $</span>
                             <span class="product-footer-weight">360 гр</span>
                         </div>
                         <button class="yellow-button">
@@ -289,7 +289,7 @@
                     </p>
                     <div class="product-footer">
                         <div class="product-footer-info">
-                            <span class="product-footer-price">8 $</span>
+                            <span class="product-footer-price" data-base-price="8">8 $</span>
                             <span class="product-footer-weight">320 гр</span>
                         </div>
                         <button class="yellow-button">
@@ -337,6 +337,7 @@
         </div>
     </footer>
 
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>
