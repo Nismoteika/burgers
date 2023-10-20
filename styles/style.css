@@ -320,13 +320,13 @@ main .container .burger-chedder-image {
     background-position: center;
 }
 
-.products-list {
+.products-items {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
 }
 
-.product-item {
+.products-item {
     width: 364px;
     height: 564px;
     display: flex;
@@ -340,16 +340,16 @@ main .container .burger-chedder-image {
     background: #211A16;
 }
 
-.product-item h5 {
+.products-item h5 {
     text-align: left;
 }
 
-.product-item img {
+.products-item img {
     height: 280px;
     width: 100%;
 }
 
-.product-item p {
+.products-item p {
     font-family: Gilroy;
     font-size: 16px;
     font-weight: 600;
