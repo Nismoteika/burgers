@@ -1,0 +1,156 @@
+<div class="background-wrapper">
+  <header>
+      <div class="container">
+          <img class="top-logo" src="/assets/images/logo.svg" alt="burger logo" />
+          <nav>
+              <ul>
+                  <li><a data-link="choose-section" (click)="scrollTo(chooseSection)">Почему у нас</a></li>
+                  <li><a data-link="list-burgers" (click)="scrollTo(listBurgers)">Меню бургеров</a></li>
+                  <li><a data-link="make-order" (click)="scrollTo(makeOrder)">Оформление заказа</a></li>
+              </ul>
+          </nav>
+          <button id="change-currency-button" (click)="changeCurrency()">{{currency}}</button>
+      </div>
+  </header>
+  <main>
+      <div class="container">
+          <div class="texts-block">
+              <span class="red-badge">Новое меню</span>
+              <h1>бургер чеддер</h1>
+              <p>
+                  Мы обновили наше меню, спешите попробовать сезонные новинки и насладиться
+                  отличным вкусом наших бургеров. Готовим для вас лучшие бургеры в городе из
+                  отборной мраморной говядины.
+              </p>
+              <button class="yellow-button" (click)="scrollTo(listBurgers)">Смотреть меню</button>
+          </div>
+          <div class="image-wrapper">
+              <img class="burger-chedder-image" src="/assets/images/main_burger.png" alt="Big Cheddar Burger"/>
+          </div>
+      </div>
+  </main>
+</div>
+
+<section class="titled-section" id="choose-section" #chooseSection>
+  <div class="container">
+      <h2>почему нас выбирают?</h2>
+      <div class="info-choose_list">
+          <div class="info-choose">
+              <img src="/assets/images/choose/burger.png" alt="burger">
+              <h5>Авторские рецепты</h5>
+              <p>
+                  Наши бургеры обладают уникальным сочетанием вкусов
+                  и не похожи ни на какие другие. Мы тщательно отбираем
+                  лучшие ингредиенты и сочетания вкусов для нашего меню.
+              </p>
+          </div>
+          <div class="info-choose">
+              <img src="/assets/images/choose/meat.png" alt="meat">
+              <h5>Мраморная говядина</h5>
+              <p>
+                  Для наших бургеров мы используем отборную 100% мраморную говядину,
+                  которую закупаем исключительно у  фермеров. Мы  уверены в 
+                  качестве нашего мяса.
+              </p>
+          </div>
+          <div class="info-choose">
+              <img src="/assets/images/choose/car.png" alt="car">
+              <h5>Быстрая доставка</h5>
+              <p>
+                  Мы доставляем в пределах МКАД за 30 минут, а если не успеем
+                  — доставка бесплатно. Мы тщательно упаковываем наши бургеры,
+                  чтобы по дороге они не остыли.
+              </p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="titled-section" id="list-burgers" #listBurgers>
+  <div class="container">
+      <h2>выберите свой бургер</h2>
+      <div class="products-items">
+          <div class="products-item" *ngFor="let product of productsData">
+              <img src="/assets/images/products/{{product.image}}" alt="">
+              <h5>{{product.name}}</h5>
+              <p>{{product.text}}</p>
+              <div class="product-footer">
+                  <div class="product-footer-info">
+                      <span class="product-footer-price">{{getProductPrice(product)}}</span>
+                      <span class="product-footer-weight">{{product.weight}} гр</span>
+                  </div>
+                  <button class="yellow-button" (click)="addProductToOrder(product)">
+                      <span>Заказать</span>
+                      <i class="icon i-card"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="titled-section" id="make-order" #makeOrder>
+  <div class="container">
+      <h2>оформление заказа</h2>
+      <div class="order_wrapper">
+          <div id="food-delivery-box-wrapper">
+              <img
+                  id="food-delivery-box"
+                  src="/assets/images/food-delivery.png"
+                  alt="доставка"
+              />
+          </div>
+          <form id="delivery-block-form" [formGroup]="form">
+              <h4>Заполните все данные и наш менеджер свяжется с вами для подтверждения заказа</h4>
+              <div
+                class="input-text-wrapper"
+                [class]="{'error': form.get('order')?.invalid && (form.get('order')?.dirty || form.get('order')?.touched)}"
+              >
+                  <input
+                    class="input-text"
+                    type="text"
+                    formControlName="order"
+                    placeholder="Выберите товар в списке"
+                    readonly
+                  />
+              </div>
+              <div
+                class="input-text-wrapper"
+                [class]="{'error': form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)}"
+              >
+                  <input
+                    class="input-text"
+                    type="text"
+                    formControlName="name"
+                    placeholder="Ваше имя"
+                  />
+              </div>
+              <div
+                class="input-text-wrapper"
+                [class]="{'error': form.get('phone')?.invalid && (form.get('phone')?.dirty || form.get('phone')?.touched)}"
+              >
+                  <input
+                    class="input-text"
+                    type="tel"
+                    formControlName="phone"
+                    placeholder="Ваш телефон"
+                  />
+              </div>
+              <input
+                type="submit"
+                class="yellow-button input-submit"
+                (click)="confirmOrder()"
+                [disabled]="!form.valid"
+                value="Оформить заказ"
+              />
+          </form>
+      </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+      <img class="logo" src="/assets/images/logo.svg" alt="burger logo" />
+      <span>Все права защищены</span>
+  </div>
+</footer>
