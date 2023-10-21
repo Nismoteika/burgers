@@ -67,6 +67,10 @@ button {
   src: url('/assets/fonts/Merriweather-Black.ttf');
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   background-color: var(--black);
   color: var(--white);
