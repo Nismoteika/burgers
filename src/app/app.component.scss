@@ -72,10 +72,10 @@ header nav ul li a {
   color: var(--white);
   text-decoration: none;
 
-  font-family: Gilroy;
+  font-family: Gilroy, sans-serif;
   font-size: 18px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: normal;
   line-height: normal;
   border-bottom: 2px solid transparent;
 }
@@ -95,10 +95,10 @@ header button#change-currency-button {
   color: var(--white);
   user-select: none;
 
-  font-family: Gilroy;
+  font-family: Gilroy, sans-serif;
   font-size: 18px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: normal;
   line-height: normal;
 }
 
@@ -126,10 +126,10 @@ main .container .texts-block h1 {
 main .container .texts-block p {
   margin-bottom: 56px;
 
-  font-family: Gilroy;
+  font-family: Gilroy, sans-serif;
   font-size: 24px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: normal;
   line-height: normal;
 }
 
@@ -140,10 +140,10 @@ main .container .texts-block p {
   background: var(--red);
   border: 0;
 
-  font-family: Gilroy;
+  font-family: Gilroy, sans-serif;
   font-size: 18px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: normal;
   line-height: 19px;
 }
 
@@ -204,9 +204,9 @@ main .container .burger-chedder-image {
 }
 
 .info-choose p {
-  font-family: Gilroy;
+  font-family: Gilroy, sans-serif;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: normal;
   line-height: 22px;
   letter-spacing: 0em;
   text-align: center;
@@ -262,9 +262,9 @@ main .container .burger-chedder-image {
 }
 
 .products-item p {
-  font-family: Gilroy;
+  font-family: Gilroy, sans-serif;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: normal;
   line-height: 22px;
   letter-spacing: 0em;
   text-align: left;
@@ -285,17 +285,17 @@ main .container .burger-chedder-image {
 }
 
 .product-footer-price {
-  font-family: Gilroy;
+  font-family: Gilroy, sans-serif;
   font-size: 32px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: normal;
   line-height: normal;
 }
 
 .product-footer-weight {
   color: #757575;
 
-  font-family: Gilroy;
+  font-family: Gilroy, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -319,10 +319,10 @@ main .container .burger-chedder-image {
   text-align: center;
   margin-bottom: 40px;
 
-  font-family: Gilroy;
+  font-family: Gilroy, sans-serif;
   font-size: 24px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: normal;
   line-height: normal;
 }
 
@@ -399,9 +399,9 @@ footer .container {
 }
 
 footer span {
-  font-family: Gilroy;
+  font-family: Gilroy, sans-serif;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: normal;
   line-height: 20px;
   letter-spacing: 0em;
 }
