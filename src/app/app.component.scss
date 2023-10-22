@@ -351,6 +351,10 @@ main .container .burger-chedder-image {
   background: red;
 }
 
+#delivery-block-form .input-text-wrapper.readonly {
+  background: #343434;
+}
+
 #delivery-block-form .input-text {
   position: absolute;
   top: 50%;

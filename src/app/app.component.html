@@ -71,13 +71,13 @@
       <h2>выберите свой бургер</h2>
       <div class="products-items">
           <div class="products-item" *ngFor="let product of productsData">
-              <img src="/assets/images/products/{{product.image}}" alt="">
-              <h5>{{product.name}}</h5>
+              <img src="{{product.image}}" alt="{{product.title}}">
+              <h5>{{product.title}}</h5>
               <p>{{product.text}}</p>
               <div class="product-footer">
                   <div class="product-footer-info">
                       <span class="product-footer-price">{{getProductPrice(product)}}</span>
-                      <span class="product-footer-weight">{{product.weight}} гр</span>
+                      <span class="product-footer-weight">{{product.grams}} гр</span>
                   </div>
                   <button class="yellow-button" (click)="addProductToOrder(product)">
                       <span>Заказать</span>
@@ -103,7 +103,7 @@
           <form id="delivery-block-form" [formGroup]="form">
               <h4>Заполните все данные и наш менеджер свяжется с вами для подтверждения заказа</h4>
               <div
-                class="input-text-wrapper"
+                class="input-text-wrapper readonly"
                 [class]="{'error': form.get('order')?.invalid && (form.get('order')?.dirty || form.get('order')?.touched)}"
               >
                   <input
